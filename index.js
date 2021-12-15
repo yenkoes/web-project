@@ -1,6 +1,7 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
   import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+  import { getStorage, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js";
   import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
 
   const firebaseConfig = {
@@ -22,6 +23,7 @@
     connectDatabaseEmulator(db, "localhost", 9000);
   } 
 
+  const storage = getStorage();
   const analytics = getAnalytics();
   const auth = getAuth();
 
@@ -90,10 +92,11 @@
       // ...
       document.getElementById('text_area').textContent = ''
       document.getElementById('currentuser').textContent = "SIGNED IN: NO ONE"
-      
     }
   });
+  
 
+ 
   document.getElementById('sign_up').addEventListener('click', signUp);
   document.getElementById('sign_in').addEventListener('click', signIn);
   document.getElementById('sign_out').addEventListener('click', signOut);

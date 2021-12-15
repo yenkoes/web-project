@@ -75,6 +75,11 @@ b {
 	color:#d2738a;	
 	letter-spacing:8px;
 	}
+
+p {
+	color:#d2738a;	
+	letter-spacing: 1px;
+}
 	
 a {
 	margin-bottom:140px;
@@ -173,6 +178,30 @@ input {
 	margin-bottom:100px;
 	
 	}
+
+	::file-selector-button {
+		display: none;
+	  }
+
+	.file_button {
+		color:#dfd5bc;
+		background-color:rgba(0,0,0,0.0);
+		width:100px;
+		cursor:pointer;
+		padding-left:0px;
+		padding-top:2px;
+		padding-bottom:2px;
+		letter-spacing:1px;
+		transition: color 0.5s ease-out, border-color 0.5s ease-out;
+		text-align:center;
+		border-radius:20px;
+		border-style: solid;
+		border-width: 2px;
+		border-color:#dfd5bc;
+		line-height:16px;
+		margin-bottom:100px;
+		
+		}
 	
 .button:hover {
 	color:#d2738a;
