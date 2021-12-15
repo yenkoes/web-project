@@ -90,7 +90,6 @@
       // ...
       document.getElementById('text_area').textContent = ''
       document.getElementById('currentuser').textContent = "SIGNED IN: NO ONE"
-      alert("NO ONE SIGNED IN")
       
     }
   });
